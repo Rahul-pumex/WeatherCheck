@@ -11,7 +11,7 @@ const swaggerUi=require('swagger-ui-express');
 const app = express();
 
 const options={
-  defenition:{
+  definition:{
     openapi:'3.0.0',
     info:{
       title:'WeatherCheck App',
