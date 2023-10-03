@@ -25,7 +25,7 @@ const options={
 }
 
 const swaggerSpec=swaggerJSDoc(options)
-app.use('/api-doc',swaggerUi.serve,swaggerUi.set)
+app.use('/api-doc',swaggerUi.serve,swaggerUi.setup)
 // Log http request status
 app.use(logger("dev"));
 app.use(cookieParser());
