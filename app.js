@@ -18,14 +18,14 @@ const options={
       version:'1.0.0'
     },
     server:[{
-      url:'http://localhost:3000/'
+      url:'https://weathercheck-1q7r.onrender.com'
     }]
   },
   apis:['./routes/index.js']
 }
 
 const swaggerSpec=swaggerJSDoc(options)
-app.use('/api-doc',swaggerUi.serve,swaggerUi.setup)
+app.use('/api-doc',swaggerUi.serve,swaggerUi.setup(swaggerSpec))
 // Log http request status
 app.use(logger("dev"));
 app.use(cookieParser());

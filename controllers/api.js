@@ -123,7 +123,7 @@ exports.fetchForecast = async (req, res) => {
         temp.push(element["temp"]);
         const timestampString = element["datetimeStr"];
         const date = new Date(timestampString);
-        const hours = date.getHours();
+        const hours = date.getHours()+5;
         const hours12 = hours % 12 || 12;
         const amOrPm = hours >= 12 ? "PM" : "AM";
         const time = `${hours12} ${amOrPm}`;
